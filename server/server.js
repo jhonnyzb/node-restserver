@@ -21,7 +21,7 @@ app.use(require('./rutas/index'))
 
 
 
-mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (err, res) => {
+mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, 'useFindAndModify': false }, (err, res) => {
     if (err) throw err
     console.log('Base de datos online');
 })
